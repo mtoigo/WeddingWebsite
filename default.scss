@@ -67,20 +67,28 @@ body {
 	}
 
 	section {
+
 		margin: 30px;
+
+		h1, h2, h3 {
+			color: $blue;
+		}
 
 		h1 {
 			margin: 0px auto 10px auto;
-			color: $blue;
 			font-size: 36pt;
 		}
 
-		a.anchor {
-			clear: both;
-			display: block;
-			position: relative;
-			top: -60px;
-			left: -30px;
+		a {
+			color: #E61616;
+
+			&.anchor {
+				clear: both;
+				display: block;
+				position: relative;
+				top: -60px;
+				left: -30px;
+			}
 		}
 
 		img {
@@ -91,8 +99,15 @@ body {
 			@media screen and (max-device-width: 480px) {
 				display: none;
 			}
+		}
 
+		div {
+			line-height: 150%;
+		}
 
+		ul {
+			float: left;
+			list-style-type: square;
 		}
 	}
 }
