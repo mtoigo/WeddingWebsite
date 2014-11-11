@@ -1,2 +1,5 @@
 .sass-cache
 default.css
+.DS_Store
+default.css.map
+npm-debug.log
