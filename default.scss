@@ -2,6 +2,7 @@ $white: #ffffff;
 $dark-grey: #272828;
 $light-grey: #a1a1a1;
 $blue: #10578d;
+$black: #000;
 
 body {
 	margin: 0 0 30px 0;font-family: Helvetica Neue, Arial;
@@ -20,13 +21,17 @@ body {
 			color: $white;
 			text-decoration: none;
 			margin-right: 22px;
+
+			@media screen and (max-width: 575px) {
+				line-height: 40px;
+			}
 		}
 	}
 
 	header {
 		background: url('header.jpg');
 		background-size: cover;
-		background-position: 0 -106px;
+		background-position: 0 -252px;
 		padding: 10px;
 		color: $white;
 		text-align: center;
@@ -34,51 +39,75 @@ body {
 		border-bottom: 2px solid $dark-grey;
 		padding-top: 44px;
 
+		@media screen and (max-width: 2000px) {
+			background-position: 0 -200px;
+		}
+
+		@media screen and (max-width: 1700px) {
+			background-position: 0 -100px;
+		}
+
+		@media screen and (max-width: 1400px) {
+			background-position: 0 0;
+		}
+
+		@media screen and (max-width: 1200px) {
+			background-position: 0 52px;
+		}
+
+		@media screen and (max-width: 575px) {
+			background-position: -55px 52px;
+		}
+
 		h1 {
 			color: $blue;
-			margin: 20px auto 0px auto;
-			font-size: 42pt;
+			margin: 15px auto 0px auto;
+			font-size: 38pt;
 			text-shadow: 1px 1px 3px $light-grey;
+
+			@media screen and (max-width: 850px) {
+				font-size: 30pt;
+			}	
+
+			@media screen and (max-width: 575px) {
+				color: #ffffff;
+				margin: 165px 0 0 10px;
+				text-align: left;
+				width: 200px;
+				text-shadow: none;
+			}	
 		}
 
 		h2 {
-			margin-top: 10px;
-			color: $dark-grey;
+			margin: 270px 20px 0 0;
+			color: #000;
+			font-size: 30pt;
+			text-align: right;
+
+			@media screen and (max-width: 575px) {
+				text-align: left;
+				margin: 0px 0 0 10px;
+				font-size: 20pt;
+			}
 		}
-
-		@media screen and (max-width: 1100px) {
-			background-position: 0 -70px;
-		}	
-
-		@media screen and (max-width: 1029px) {
-			background-position: 0 0px;
-		}	
-
-		@media screen and (max-width: 730px) {
-			height: 300px;
-
-			h1 {
-				font-size: 30pt;
-				margin: 15px auto 0px auto;
-			}
-			h2 {
-				margin-top: 200px;
-				color: $white;
-			}
-		}	
 	}
 
 	section {
 		margin: 30px;
 		word-wrap: break-word;
 
-		h1, h2, h3 {
-			color: $blue;
-		}
-
 		h1 {
+			color: $blue;
 			margin: 0px auto 10px auto;
 			font-size: 32pt;
+
+			@media screen and (max-width: 575px) {
+				font-size: 22pt;
+			}
+		}
+
+		h2, h3 {
+			color: $black;
 		}
 
 		a {
@@ -90,6 +119,10 @@ body {
 				position: relative;
 				top: -60px;
 				left: -30px;
+
+				@media screen and (max-width: 575px) {
+					top: -120px;
+				}
 			}
 		}
 
@@ -98,6 +131,10 @@ body {
 			float: left;
 			margin-right: 20px;
 
+			&.top {
+				width: 300px;
+			}
+
 			&.right {
 				float: right;
 				margin-right: 0;
@@ -105,12 +142,12 @@ body {
 			}
 
 			@media screen and (max-width: 575px) {
-				width: 100%;
+				width: 100% !important;
 				margin-bottom: 20px
 			}
 		}
 
-		div {
+		> div {
 			line-height: 150%;
 
 			&.travel-fun {
@@ -127,6 +164,22 @@ body {
 
 		ul {
 			list-style-type: square;
+		}
+
+		.hotels {
+			width: 80%;
+			margin: 0 auto;
+
+			div {
+				width: 50%;
+				text-align: center;
+				float: left;
+
+				@media screen and (max-width: 575px) {
+					float: none;
+					width: 100%;
+				}
+			}
 		}
 	}
 }
